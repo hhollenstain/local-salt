@@ -15,5 +15,5 @@ polychromatic-ppa:
     - ppa: lah7/polychromatic
 
 razerdriver-ppa:
-  pkgrepo.abset:
+  pkgrepo.absent:
     - ppa: terrz/razerutils
