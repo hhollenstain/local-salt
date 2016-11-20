@@ -26,10 +26,6 @@ If the sates/pillars get updated locally or in the repo just use the c flag
 ## States
 There will be several top level states to work with currently are listed as such:
 
-#core
-#stealth
-#work
-
 ### Core
 Core state will contain all the packages and configurations all my machines will
 use.
