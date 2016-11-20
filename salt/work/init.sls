@@ -5,6 +5,7 @@ work-packages:
   pkg.installed:
     - pkgs:
       - slack-desktop
+      - nautilus-dropbox
     - require:
       - pkgrepo: slack-package-repository
 
