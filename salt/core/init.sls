@@ -14,7 +14,6 @@ core-packages:
       - numix-gtk-theme
       - powerline
       - rsync
-      - slack-desktop
       - screen
       - telnet
       - terminator
@@ -27,13 +26,6 @@ core-packages:
       - pkgrepo: slack-package-repository
       - pkgrepo: google-chrome-package-repository
       - pkgrepo: numix-ppa
-
-#core-docker-packages:
-#  pkg.installed:
-#    - pkgs:
-#      - docker-engine
-#    - require:
-#      - pkgrepo: docker-package-repository
 
 docker-package-repository:
   pkgrepo.managed:
@@ -48,12 +40,6 @@ google-chrome-package-repository:
     - name: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
     - humanname: google-chrome
     - file: /etc/apt/sources.list.d/google-chrome.list
-
-slack-package-repository:
-  pkgrepo.managed:
-    - name: deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
-    - humanname: slack
-    - file: /etc/apt/sources.list.d/slack.list
 
 numix-ppa:
   pkgrepo.absent:
