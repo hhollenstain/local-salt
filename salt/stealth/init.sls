@@ -14,14 +14,14 @@ install-libinput-gestures:
     - timeout: 300
     - unless: test -x /etc/libinput-gestures.conf
     - require:
-      - git.latest: libinput-gestures
+      - git: libinput-gestures
 
 libinput-gestures:
   git.latest:
     - name: https://github.com/bulletmark/libinput-gestures.git
     - target: ~/stealth/tools/libinput-gestures
     - require:
-      - file.directory: ~/stealth/tools
+      - file: ~/stealth/tools
 
 ~/stealth/tools:
   file.directory:
