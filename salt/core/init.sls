@@ -21,9 +21,9 @@ core-packages:
       - unity-tweak-tool
       - vim
       - wget
+      - zsh
     - require:
       - pkgrepo: docker-package-repository
-      - pkgrepo: slack-package-repository
       - pkgrepo: google-chrome-package-repository
       - pkgrepo: numix-ppa
 
@@ -44,3 +44,12 @@ google-chrome-package-repository:
 numix-ppa:
   pkgrepo.absent:
     - ppa: numix/ppa
+
+oh-my-zsh:
+  cmd.run:
+    - name: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    - shell: /bin/bash
+    - timeout: 300
+    - unless: test -e /home/{{pillar['stealth']['user']}}/.oh-my-zsh
+    - require:
+      - pkg: core-packages

@@ -1,3 +1,7 @@
+include:
+  - .chroma
+  - core
+
 stealth-core-packages:
   pkg.installed:
     - pkgs:
@@ -12,23 +16,24 @@ install-libinput-gestures:
         make install
     - shell: /bin/bash
     - timeout: 300
-    - unless: test -x /etc/libinput-gestures.conf
+    - unless: test -e /etc/libinput-gestures.conf
     - require:
       - git: libinput-gestures
 
 libinput-gestures:
   git.latest:
     - name: https://github.com/bulletmark/libinput-gestures.git
-    - target: ~/stealth/tools/libinput-gestures
+    - target: /home/{{pillar['stealth']['user']}}/stealth/tools/libinput-gestures
     - require:
-      - file: ~/stealth/tools
+      - file: /home/{{pillar['stealth']['user']}}/stealth/tools
 
-~/stealth/tools:
+/home/{{pillar['stealth']['user']}}/stealth/tools:
   file.directory:
     - user: {{pillar['stealth']['user']}}
     - group: {{pillar['stealth']['group']}}
     - dir_mode: 755
     - file_mode: 644
+    - makedirs: True
     - recurse:
       - user
       - group

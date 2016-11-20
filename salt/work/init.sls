@@ -1,3 +1,6 @@
+include:
+  - core
+
 work-packages:
   pkg.installed:
     - pkgs:
