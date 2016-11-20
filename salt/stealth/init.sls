@@ -23,14 +23,14 @@ install-libinput-gestures:
 libinput-gestures:
   git.latest:
     - name: https://github.com/bulletmark/libinput-gestures.git
-    - target: /home/{{pillar['stealth']['user']}}/stealth/tools/libinput-gestures
+    - target: /home/{{pillar['user']}}/stealth/tools/libinput-gestures
     - require:
-      - file: /home/{{pillar['stealth']['user']}}/stealth/tools
+      - file: /home/{{pillar['user']}}/stealth/tools
 
-/home/{{pillar['stealth']['user']}}/stealth/tools:
+/home/{{pillar['user']}}/stealth/tools:
   file.directory:
-    - user: {{pillar['stealth']['user']}}
-    - group: {{pillar['stealth']['group']}}
+    - user: {{pillar['user']}}
+    - group: {{pillar['group']}}
     - dir_mode: 755
     - file_mode: 644
     - makedirs: True

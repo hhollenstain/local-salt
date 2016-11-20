@@ -1,3 +1,2 @@
-stealth:
-  user: hhollenstain
-  group: hhollenstain
+user: hhollenstain
+group: hhollenstain

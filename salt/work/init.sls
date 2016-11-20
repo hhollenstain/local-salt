@@ -19,5 +19,6 @@ slack-package-repository:
 pip_install_awscli:
   pip.installed:
     - name: awscli
+    - user: {{pillar['user']}}
     - require:
       - pkg: work-packages
