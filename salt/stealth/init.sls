@@ -27,6 +27,11 @@ libinput-gestures:
     - require:
       - file: /home/{{pillar['user']}}/stealth/tools
 
+libinput-gestures-config:
+  file.managed:
+    - name: /etc/libinput-gestures.conf
+    - source: salt://stealth/files/libinput-gestures.conf
+
 /home/{{pillar['user']}}/stealth/tools:
   file.directory:
     - user: {{pillar['user']}}
