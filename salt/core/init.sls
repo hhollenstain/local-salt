@@ -50,6 +50,6 @@ oh-my-zsh:
     - name: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     - shell: /bin/bash
     - timeout: 300
-    - unless: test -e /home/{{pillar['stealth']['user']}}/.oh-my-zsh
+    - unless: test -e /home/{{pillar['user']}}/.oh-my-zsh
     - require:
       - pkg: core-packages
