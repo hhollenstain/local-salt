@@ -43,3 +43,9 @@ libinput-gestures-config:
       - user
       - group
       - mode
+
+
+{{pillar['user']}}:
+  user.present:
+  - optional_groups:
+    - input

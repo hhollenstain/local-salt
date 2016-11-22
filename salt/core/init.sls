@@ -46,11 +46,11 @@ numix-ppa:
   pkgrepo.managed:
     - ppa: numix/ppa
 
-oh-my-zsh:
-  cmd.run:
-    - name: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    - shell: /bin/bash
-    - timeout: 300
-    - unless: test -e /home/{{pillar['user']}}/.oh-my-zsh
-    - require:
-      - pkg: core-packages
+#oh-my-zsh:
+#  cmd.run:
+#    - name: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#    - shell: /bin/bash
+#    - timeout: 300
+#    - unless: test -e /home/{{pillar['user']}}/.oh-my-zsh
+#    - require:
+#      - pkg: core-packages
