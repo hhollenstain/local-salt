@@ -8,6 +8,7 @@ core-packages:
       - git
       - google-chrome-stable
       - iotop
+      - keepassx
       - lsof
       - mtr
       - numix-icon-theme
@@ -22,6 +23,7 @@ core-packages:
       - unity-tweak-tool
       - vim
       - wget
+      - wine
       - zsh
     - skip_verify: True
     - require:
