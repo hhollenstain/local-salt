@@ -22,6 +22,7 @@ core-packages:
       - vim
       - wget
       - zsh
+    - skip_verify: True
     - require:
       - pkgrepo: docker-package-repository
       - pkgrepo: google-chrome-package-repository
@@ -42,7 +43,7 @@ google-chrome-package-repository:
     - file: /etc/apt/sources.list.d/google-chrome.list
 
 numix-ppa:
-  pkgrepo.absent:
+  pkgrepo.managed:
     - ppa: numix/ppa
 
 oh-my-zsh:

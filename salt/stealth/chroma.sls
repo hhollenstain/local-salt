@@ -11,9 +11,9 @@ chroma-packages:
       - pkgrepo: chroma-polychromatic-ppa
 
 chroma-polychromatic-ppa:
-  pkgrepo.absent:
+  pkgrepo.managed:
     - ppa: lah7/polychromatic
 
 chroma-razerdriver-ppa:
-  pkgrepo.absent:
+  pkgrepo.managed:
     - ppa: terrz/razerutils

@@ -7,6 +7,7 @@ work-packages:
       - slack-desktop
       - nautilus-dropbox
       - python-pip
+    - skip_verify: True
     - require:
       - pkgrepo: slack-package-repository
 
