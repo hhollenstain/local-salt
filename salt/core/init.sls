@@ -1,6 +1,7 @@
 core-packages:
   pkg.installed:
     - pkgs:
+      - chromium-browser
       - docker-engine
       - dstat
       - fonts-powerline
