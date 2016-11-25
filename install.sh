@@ -11,6 +11,8 @@ function help() {
 function install_salt() {
   sudo apt -y install software-properties-common;
   sudo add-apt-repository "deb http://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest xenial main";
+	wget -O - https://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
+	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0E08A149DE57BFBE
   sudo apt-get update;
   sudo apt -y install --allow-unauthenticated salt-minion python-apt;
 }

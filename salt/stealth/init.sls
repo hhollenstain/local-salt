@@ -49,3 +49,4 @@ libinput-gestures-config:
   user.present:
   - optional_groups:
     - input
+    - docker

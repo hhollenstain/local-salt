@@ -14,6 +14,7 @@ core-packages:
       - numix-icon-theme
       - numix-icon-theme-circle
       - numix-gtk-theme
+      - pithos
       - powerline
       - rsync
       - screen
