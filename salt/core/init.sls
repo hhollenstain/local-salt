@@ -2,6 +2,7 @@ core-packages:
   pkg.installed:
     - pkgs:
       - chromium-browser
+      - cifs-utils
       - docker-engine
       - dstat
       - fonts-powerline
@@ -14,6 +15,7 @@ core-packages:
       - numix-icon-theme
       - numix-icon-theme-circle
       - numix-gtk-theme
+      - openvpn
       - pithos
       - powerline
       - rsync
